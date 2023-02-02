@@ -1,0 +1,32 @@
+<div class="d-flex flex-row bd-highlight mb-3">
+    <div class="p-2 w-100 bd-highlight">
+        <div class="input-group mb-3">
+            <span class="input-group-text">No. de Edificio</span>
+            <input type="number" class="form-control" [(ngModel)]="EdificioNumero" required>
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text">Dirección</span>
+            <input type="text"  class="form-control" [(ngModel)]="EdificioDireccion" required>
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text">Tipo Edificio</span>
+            <input type="text" class="form-control" [(ngModel)]="TipoEdificio" required>
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text">Nivel de Calidad</span>
+            <input type="number" class="form-control" [(ngModel)]="NivelCalidad" required>
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text">Categoría</span>
+            <input type="number" class="form-control" [(ngModel)]="Categoria"required>
+        </div>
+    </div>
+</div>
+
+<button type="button" (click)="addEdificios()" *ngIf="edificio.EdificioNumero=='0'" class="btn btn-primary">
+    Crear
+</button>
+
+<button type="button" (click)="updateEdificios()" *ngIf="edificio.EdificioNumero!='0'" class="btn btn-primary">
+    Editar
+</button>

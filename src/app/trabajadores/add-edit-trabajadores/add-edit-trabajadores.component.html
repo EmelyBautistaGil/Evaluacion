@@ -1,0 +1,32 @@
+<div class="d-flex flex-row bd-highlight mb-3">
+    <div class="p-2 w-100 bd-highlight">
+        <div class="input-group mb-3">
+            <span class="input-group-text">No. de Trabajador</span>
+            <input type="number" class="form-control" [(ngModel)]="TrabajadorNumero" required>
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text">Nombre</span>
+            <input type="text"  class="form-control" [(ngModel)]="TrabajadorNombre" required>
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text">Tarifa</span>
+            <input type="number" class="form-control" [(ngModel)]="TrabajadorTarifa" required>
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text">Oficio</span>
+            <input type="text" class="form-control" [(ngModel)]="Oficio" required>
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text">Supervisor</span>
+            <input type="number" class="form-control" [(ngModel)]="TrabajadorSupervisor"required>
+        </div>
+    </div>
+</div>
+
+<button type="button" (click)="addTrabajadores()" *ngIf="trabajador.TrabajadorNumero=='0'" class="btn btn-primary">
+    Crear
+</button>
+
+<button type="button" (click)="updateTrabajadores()" *ngIf="trabajador.TrabajadorNumero!='0'" class="btn btn-primary">
+    Editar
+</button>

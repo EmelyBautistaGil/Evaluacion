@@ -1,0 +1,43 @@
+<div class="d-flex flex-row bd-highlight mb-3">
+    <div class="p-2 w-100 bd-highlight">
+        <div class="input-group mb-3">
+            <span class="input-group-text">No. de Asignación</span>
+            <input type="number" class="form-control" [(ngModel)]="AsignacionNo" required>
+        </div>
+        
+        <div class="input-group mb-3">
+            <span class="input-group-text">No. de Edificio</span>
+            <select class="form-select" [(ngModel)]="EdificioNumero">
+                <option>--Seleccionar--</option>
+                <option *ngFor="let edf of EdificiosList">
+                    {{edf}}
+                </option>
+            </select>
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text">No. de Trabajador</span>
+            <select class="form-select" [(ngModel)]="TrabajadorNumero">
+                <option>--Seleccionar--</option>
+                <option *ngFor="let trab of TrabajadoresList">
+                    {{trab}}
+                </option>
+            </select>
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text">Fecha de Inicio</span>
+            <input type="date" class="form-control" [(ngModel)]="AsignacionFechaInicio" required>
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text">No. de Días</span>
+            <input type="number" class="form-control" [(ngModel)]="AsignacionNoDias"required>
+        </div>
+    </div>
+</div>
+
+<button type="button" (click)="addAsignaciones()" *ngIf="asignacion.AsignacionNo=='0'" class="btn btn-primary">
+    Crear
+</button>
+
+<button type="button" (click)="updateAsignaciones()" *ngIf="asignacion.AsignacionNo!='0'" class="btn btn-primary">
+    Editar
+</button>
