@@ -15,6 +15,8 @@ import { ShowAsignacionesComponent } from './asignaciones/show-asignaciones/show
 import { ApiserviceService } from './apiservice.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ReportComponent } from './report/report.component';
+import { ShowReportComponent } from './report/show-report/show-report.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ShowEdificiosComponent,
     AsignacionesComponent,
     AddEditAsignacionesComponent,
-    ShowAsignacionesComponent
+    ShowAsignacionesComponent,
+    ReportComponent,
+    ShowReportComponent
   ],
   imports: [
     BrowserModule,

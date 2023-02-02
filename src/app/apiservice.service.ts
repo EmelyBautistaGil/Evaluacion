@@ -100,4 +100,23 @@ export class ApiserviceService {
     const httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) };
     return this.http.delete<number>(this.apiUrl + 'Asignaciones/Delete/' + asigId, httpOptions);
   }
+
+
+  // Reports
+
+  getTrabajadoresTarifa(): Observable<any[]> {
+    return this.http.get<any[]>(`${this.apiUrl}Reports/TrabajadoresTarifa`)
+  }
+
+  TrabajadorAs435(): Observable<any[]> {
+    return this.http.get<any[]>(`${this.apiUrl}Reports/TrabajadorAs435`)
+  }
+
+  CantidadEd312(): Observable<any[]> {
+    return this.http.get<any[]>(`${this.apiUrl}Reports/CantidadEd312`)
+  }
+
+  TotalDias(): Observable<any[]> {
+    return this.http.get<any[]>(`${this.apiUrl}Reports/TotalDias`)
+  }
 }
